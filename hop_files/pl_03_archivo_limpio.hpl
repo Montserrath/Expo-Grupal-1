@@ -47,6 +47,55 @@
     </hop>
   </order>
   <transform>
+    <name>Data validator</name>
+    <type>Validator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <concat_errors>N</concat_errors>
+    <concat_separator/>
+    <validate_all>N</validate_all>
+    <validator_field>
+      <allowed_value>
+</allowed_value>
+      <conversion_mask/>
+      <data_type>String</data_type>
+      <data_type_verified>Y</data_type_verified>
+      <decimal_symbol/>
+      <end_string/>
+      <end_string_not_allowed/>
+      <error_code>Tamanno incorrecto</error_code>
+      <error_description>El isbn tiene que ser de 13 digitos</error_description>
+      <grouping_symbol/>
+      <is_sourcing_values>N</is_sourcing_values>
+      <max_length>13</max_length>
+      <max_value/>
+      <min_length>13</min_length>
+      <min_value/>
+      <name>isbn</name>
+      <null_allowed>Y</null_allowed>
+      <only_null_allowed>N</only_null_allowed>
+      <only_numeric_allowed>N</only_numeric_allowed>
+      <regular_expression/>
+      <regular_expression_not_allowed/>
+      <sourcing_field/>
+      <sourcing_transform/>
+      <start_string/>
+      <start_string_not_allowed/>
+      <validation_name>isbn</validation_name>
+    </validator_field>
+    <attributes/>
+    <GUI>
+      <xloc>464</xloc>
+      <yloc>416</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Detectar nulls</name>
     <type>FilterRows</type>
     <description/>
@@ -230,6 +279,249 @@
     </GUI>
   </transform>
   <transform>
+    <name>Prestamos Bilblioteca</name>
+    <type>CSVInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <filename>C:\Users\Usuario I 2026\Downloads\Expo Grupal 1\staging\prestamos_post_conflictivos.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>;</separator>
+    <enclosure/>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <schemaDefinition/>
+    <ignoreFields>N</ignoreFields>
+    <lazy_conversion>N</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding/>
+    <fields>
+      <field>
+        <name>id_prestamo</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>fecha_devolucion</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>titulo_libro</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>fecha_prestamo</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>fecha_vencimiento</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>categoria</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>tipo_usuario</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>estado_prestamo</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>canal_prestamo</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>isbn</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>renovaciones</name>
+        <type>String</type>
+        <format>#</format>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>autor</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>sede_biblioteca</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>nombre_usuario</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>observaciones</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>id_libro</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>id_bibliotecario</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>multa_crc</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>id_usuario</name>
+        <type>String</type>
+        <format/>
+        <currency>$</currency>
+        <decimal>,</decimal>
+        <group> </group>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+    <attributes/>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>320</yloc>
+    </GUI>
+  </transform>
+  <transform>
     <name>Texto con nulls</name>
     <type>TextFileOutput</type>
     <description/>
@@ -243,7 +535,7 @@
     <schema_definition/>
     <ignore_fields>N</ignore_fields>
     <separator>;</separator>
-    <enclosure>"</enclosure>
+    <enclosure/>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -256,9 +548,9 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>D:\5semestreTEC\inteligenciaNegocios\txtNoNUlls.txt</name>
+      <name>C:\Users\Usuario I 2026\Downloads\Expo Grupal 1\staging\textoconnulls.csv</name>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
       <extention/>
       <append>N</append>
       <split>N</split>
@@ -273,302 +565,258 @@
       <splitevery/>
     </file>
     <fields>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>320</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Prestamos Bilblioteca</name>
-    <type>CSVInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <filename>D:\5semestreTEC\inteligenciaNegocios\prestamos_biblioteca_etl_100500.csv</filename>
-    <filename_field/>
-    <rownum_field/>
-    <include_filename>N</include_filename>
-    <separator>,</separator>
-    <enclosure>"</enclosure>
-    <header>Y</header>
-    <buffer_size>50000</buffer_size>
-    <schemaDefinition/>
-    <ignoreFields>N</ignoreFields>
-    <lazy_conversion>Y</lazy_conversion>
-    <add_filename_result>N</add_filename_result>
-    <parallel>N</parallel>
-    <newline_possible>N</newline_possible>
-    <encoding/>
-    <fields>
       <field>
-        <name>﻿id_prestamo</name>
+        <name>id_prestamo</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>10</length>
-        <precision>-1</precision>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
         <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>-1</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>fecha_prestamo</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
         <length>10</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
       </field>
       <field>
         <name>fecha_vencimiento</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
         <length>10</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
       </field>
       <field>
         <name>fecha_devolucion</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>10</length>
-        <precision>-1</precision>
+        <type>Date</type>
+        <format>dd/MM/yyyy</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
         <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>id_usuario</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>9</length>
+        <roundingType>half_even</roundingType>
+        <length>-1</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>tipo_usuario</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>12</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>nombre_usuario</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>27</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>id_libro</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>7</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>isbn</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>13</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>titulo_libro</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>38</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>autor</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>15</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
       </field>
       <field>
         <name>categoria</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>10</length>
-        <precision>-1</precision>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
         <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>11</length>
+        <precision>-1</precision>
       </field>
       <field>
-        <name>sede_biblioteca</name>
+        <name>tipo_usuario</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>17</length>
-        <precision>-1</precision>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
         <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>12</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>estado_prestamo</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>11</length>
-        <precision>-1</precision>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
         <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>multa_crc</name>
-        <type>String</type>
-        <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>8</length>
+        <roundingType>half_even</roundingType>
+        <length>12</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
       </field>
       <field>
         <name>canal_prestamo</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
         <length>12</length>
         <precision>-1</precision>
-        <trim_type>none</trim_type>
       </field>
       <field>
-        <name>id_bibliotecario</name>
+        <name>isbn</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>7</length>
-        <precision>-1</precision>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
         <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>13</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>renovaciones</name>
-        <type>String</type>
+        <type>Integer</type>
         <format>#</format>
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
         <length>15</length>
         <precision>0</precision>
+      </field>
+      <field>
+        <name>autor</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
         <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>16</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>sede_biblioteca</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>17</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>nombre_usuario</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>28</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>observaciones</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <length>30</length>
-        <precision>-1</precision>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
         <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>31</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>titulo_libro</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>40</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>id_libro</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>7</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>id_bibliotecario</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>7</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>multa_crc</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>8</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>id_usuario</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <roundingType>half_even</roundingType>
+        <length>9</length>
+        <precision>-1</precision>
       </field>
     </fields>
     <attributes/>
     <GUI>
-      <xloc>256</xloc>
+      <xloc>672</xloc>
       <yloc>320</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Data validator</name>
-    <type>Validator</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <concat_errors>N</concat_errors>
-    <concat_separator/>
-    <validate_all>N</validate_all>
-    <validator_field>
-      <allowed_value>
-</allowed_value>
-      <conversion_mask/>
-      <data_type>String</data_type>
-      <data_type_verified>Y</data_type_verified>
-      <decimal_symbol/>
-      <end_string/>
-      <end_string_not_allowed/>
-      <error_code>Tamanno incorrecto</error_code>
-      <error_description>El isbn tiene que ser de 13 digitos</error_description>
-      <grouping_symbol/>
-      <is_sourcing_values>N</is_sourcing_values>
-      <max_length>13</max_length>
-      <max_value/>
-      <min_length>13</min_length>
-      <min_value/>
-      <name/>
-      <null_allowed>Y</null_allowed>
-      <only_null_allowed>N</only_null_allowed>
-      <only_numeric_allowed>N</only_numeric_allowed>
-      <regular_expression/>
-      <regular_expression_not_allowed/>
-      <sourcing_field/>
-      <start_string/>
-      <start_string_not_allowed/>
-      <validation_name>isbn</validation_name>
-    </validator_field>
-    <attributes/>
-    <GUI>
-      <xloc>464</xloc>
-      <yloc>432</yloc>
     </GUI>
   </transform>
   <transform>
@@ -595,7 +843,6 @@
             <value>
               <isnull>N</isnull>
               <length>-1</length>
-              <mask/>
               <name>constant</name>
               <precision>-1</precision>
               <text>^[A-Z][a-z]+$</text>
@@ -612,7 +859,6 @@
             <value>
               <isnull>N</isnull>
               <length>-1</length>
-              <mask/>
               <name>constant</name>
               <precision>-1</precision>
               <text>0</text>
@@ -627,7 +873,6 @@
         <value>
           <isnull>N</isnull>
           <length>-1</length>
-          <mask/>
           <name>constant</name>
           <precision>-1</precision>
           <text>^[A-Z][a-z]+$</text>
@@ -663,7 +908,7 @@
     <footer>N</footer>
     <format>DOS</format>
     <compression>None</compression>
-    <encoding/>
+    <encoding>windows-1252</encoding>
     <endedLine/>
     <fileNameInField>N</fileNameInField>
     <fileNameField/>
@@ -690,7 +935,7 @@
     <attributes/>
     <GUI>
       <xloc>464</xloc>
-      <yloc>608</yloc>
+      <yloc>624</yloc>
     </GUI>
   </transform>
   <transform_error_handling>

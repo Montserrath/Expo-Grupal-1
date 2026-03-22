@@ -46,16 +46,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Ruta conflictivos</from>
-      <to>Secuencia conflictivos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Secuencia conflictivos</from>
-      <to>Crear id resuelto conflictivo</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Ruta validos </from>
       <to>Crear id resuelto valido</to>
       <enabled>Y</enabled>
@@ -95,6 +85,11 @@
       <to>Staging_final_post_conflictivos</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Ruta conflictivos</from>
+      <to>Crear id resuelto conflictivo</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <transform>
     <name>Ajustar conflictivos final </name>
@@ -112,12 +107,13 @@
         <length>-2</length>
         <name>id_prestamo_resuelto</name>
         <precision>-2</precision>
+        <rename/>
       </field>
       <remove>
         <name>cantidad_por_id</name>
       </remove>
       <remove>
-        <name>sec_conflicto</name>
+        <name>sec_por_id</name>
       </remove>
       <select_unspecified>Y</select_unspecified>
     </fields>
@@ -143,9 +139,13 @@
         <length>-2</length>
         <name>id_prestamo_resuelto</name>
         <precision>-2</precision>
+        <rename/>
       </field>
       <remove>
         <name>cantidad_por_id</name>
+      </remove>
+      <remove>
+        <name>sec_por_id</name>
       </remove>
       <select_unspecified>Y</select_unspecified>
     </fields>
@@ -166,13 +166,15 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <add_linenr>N</add_linenr>
+    <add_linenr>Y</add_linenr>
     <all_rows>Y</all_rows>
     <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
         <aggregate>cantidad_por_id</aggregate>
+        <subject/>
         <type>COUNT_ANY</type>
+        <valuefield/>
       </field>
     </fields>
     <give_back_row>N</give_back_row>
@@ -182,6 +184,7 @@
       </field>
     </group>
     <ignore_aggregate>N</ignore_aggregate>
+    <linenr_fieldname>sec_por_id</linenr_fieldname>
     <prefix>grp</prefix>
     <attributes/>
     <GUI>
@@ -205,17 +208,30 @@
       <targetFieldLength>0</targetFieldLength>
       <targetFieldName>id_prestamo_resuelto</targetFieldName>
     </ConcatFields>
+    <enclosure/>
     <fields>
       <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
         <length>-1</length>
         <name>id_prestamo</name>
+        <nullif/>
         <precision>-1</precision>
+        <trim_type/>
         <type>String</type>
       </field>
       <field>
+        <currency/>
+        <decimal/>
+        <format/>
+        <group/>
         <length>-1</length>
-        <name>sec_conflicto</name>
+        <name>sec_por_id</name>
+        <nullif/>
         <precision>-1</precision>
+        <trim_type/>
         <type>Integer</type>
       </field>
     </fields>
@@ -1009,31 +1025,6 @@
     <GUI>
       <xloc>624</xloc>
       <yloc>640</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Secuencia conflictivos</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <counter_name>contador_conflictos</counter_name>
-    <increment_by>1</increment_by>
-    <max_value>999999999</max_value>
-    <seqname>SEQ_</seqname>
-    <start_at>1</start_at>
-    <use_counter>Y</use_counter>
-    <use_database>N</use_database>
-    <valuename>sec_conflicto</valuename>
-    <attributes/>
-    <GUI>
-      <xloc>832</xloc>
-      <yloc>544</yloc>
     </GUI>
   </transform>
   <transform>
