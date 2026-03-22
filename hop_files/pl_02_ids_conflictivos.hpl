@@ -86,28 +86,13 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Finalizar id prestamo</from>
-      <to>Staging_final_post_conflictivos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Contar Ids</from>
-      <to>Ordenar conteo por id</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Ordenar conteo por id</from>
-      <to>Cruzar conteo con filas</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Cruzar conteo con filas</from>
       <to>Separar conflictivos</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Ordenar por id</from>
-      <to>Cruzar conteo con filas</to>
+      <from>Finalizar id prestamo</from>
+      <to>Staging_final_post_conflictivos</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -351,14 +336,14 @@
     <attributes/>
     <GUI>
       <xloc>80</xloc>
-      <yloc>160</yloc>
+      <yloc>176</yloc>
     </GUI>
   </transform>
   <transform>
     <name>Ordenar por id</name>
     <type>SortRows</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -385,7 +370,7 @@
     <attributes/>
     <GUI>
       <xloc>240</xloc>
-      <yloc>160</yloc>
+      <yloc>176</yloc>
     </GUI>
   </transform>
   <transform>
@@ -400,7 +385,7 @@
       <schema_name/>
     </partitioning>
     <add_linenr>N</add_linenr>
-    <all_rows>N</all_rows>
+    <all_rows>Y</all_rows>
     <directory>${java.io.tmpdir}</directory>
     <fields>
       <field>
@@ -524,7 +509,7 @@
     <attributes/>
     <GUI>
       <xloc>832</xloc>
-      <yloc>416</yloc>
+      <yloc>432</yloc>
     </GUI>
   </transform>
   <transform>
@@ -784,7 +769,7 @@
     <attributes/>
     <GUI>
       <xloc>1504</xloc>
-      <yloc>368</yloc>
+      <yloc>416</yloc>
     </GUI>
   </transform>
   <transform>
@@ -835,67 +820,7 @@
     <attributes/>
     <GUI>
       <xloc>1504</xloc>
-      <yloc>160</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Cruzar conteo con filas</name>
-    <type>MergeJoin</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <join_type>LEFT OUTER</join_type>
-    <keys_1>
-      <key>id_prestamo</key>
-    </keys_1>
-    <keys_2>
-      <key>id_prestamo</key>
-    </keys_2>
-    <transform1>Ordenar por id</transform1>
-    <transform2>Ordenar conteo por id</transform2>
-    <attributes/>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>528</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Ordenar conteo por id</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compress>N</compress>
-    <compress_variables/>
-    <directory>${java.io.tmpdir}</directory>
-    <fields>
-      <field>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <name>id_prestamo</name>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <free_memory/>
-    <sort_prefix>out</sort_prefix>
-    <sort_size>1000000</sort_size>
-    <unique_rows>N</unique_rows>
-    <attributes/>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>416</yloc>
+      <yloc>176</yloc>
     </GUI>
   </transform>
   <transform_error_handling>
