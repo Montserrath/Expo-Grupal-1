@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <pipeline>
   <info>
-    <name>pl3_final</name>
+    <name>pl_3_version_final</name>
     <name_sync_with_filename>Y</name_sync_with_filename>
-    <description/>
-    <extended_description/>
-    <pipeline_version/>
+    <description />
+    <extended_description />
+    <pipeline_version />
     <pipeline_type>Normal</pipeline_type>
     <parameters>
     </parameters>
@@ -66,23 +66,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Contar validos</from>
-      <to>metricas_validos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Contar errores</from>
-      <to>metricas_errores</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Prelimpiar valores inválidos</from>
       <to>Convertir tipos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Validar registros</from>
-      <to>Contar validos</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -95,32 +80,27 @@
       <to>Validar registros</to>
       <enabled>Y</enabled>
     </hop>
-    <hop>
-      <from>errores_etl</from>
-      <to>Contar errores</to>
-      <enabled>Y</enabled>
-    </hop>
   </order>
   <transform>
     <name>CSV file input</name>
     <type>CSVInput</type>
-    <description/>
+    <description />
     <distribute>Y</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
     <filename>C:\Users\Usuario I 2026\Downloads\Expo Grupal 1\staging\prestamos_post_conflictivos.csv</filename>
-    <filename_field/>
-    <rownum_field/>
+    <filename_field />
+    <rownum_field />
     <include_filename>N</include_filename>
     <separator>;</separator>
     <enclosure>"</enclosure>
     <header>Y</header>
     <buffer_size>50000</buffer_size>
-    <schemaDefinition/>
+    <schemaDefinition />
     <ignoreFields>N</ignoreFields>
     <lazy_conversion>N</lazy_conversion>
     <add_filename_result>N</add_filename_result>
@@ -131,7 +111,7 @@
       <field>
         <name>id_prestamo</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -142,7 +122,7 @@
       <field>
         <name>fecha_prestamo</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -153,7 +133,7 @@
       <field>
         <name>fecha_vencimiento</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -164,7 +144,7 @@
       <field>
         <name>fecha_devolucion</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -175,7 +155,7 @@
       <field>
         <name>categoria</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -186,7 +166,7 @@
       <field>
         <name>tipo_usuario</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -197,7 +177,7 @@
       <field>
         <name>estado_prestamo</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -208,7 +188,7 @@
       <field>
         <name>canal_prestamo</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -219,7 +199,7 @@
       <field>
         <name>isbn</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -230,7 +210,7 @@
       <field>
         <name>renovaciones</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -241,7 +221,7 @@
       <field>
         <name>autor</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -252,7 +232,7 @@
       <field>
         <name>sede_biblioteca</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -263,7 +243,7 @@
       <field>
         <name>nombre_usuario</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -274,7 +254,7 @@
       <field>
         <name>observaciones</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -285,7 +265,7 @@
       <field>
         <name>titulo_libro</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -296,7 +276,7 @@
       <field>
         <name>id_libro</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -307,7 +287,7 @@
       <field>
         <name>id_bibliotecario</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -318,7 +298,7 @@
       <field>
         <name>multa_crc</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -329,7 +309,7 @@
       <field>
         <name>id_usuario</name>
         <type>String</type>
-        <format/>
+        <format />
         <currency>$</currency>
         <decimal>,</decimal>
         <group> </group>
@@ -338,148 +318,86 @@
         <trim_type>none</trim_type>
       </field>
     </fields>
-    <attributes/>
+    <attributes />
     <GUI>
       <xloc>224</xloc>
       <yloc>80</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>Contar errores</name>
-    <type>GroupBy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <add_linenr>N</add_linenr>
-    <all_rows>Y</all_rows>
-    <directory>${java.io.tmpdir}</directory>
-    <fields>
-      <field>
-        <aggregate>registros_error</aggregate>
-        <type>COUNT_ANY</type>
-      </field>
-    </fields>
-    <give_back_row>N</give_back_row>
-    <group>
-</group>
-    <ignore_aggregate>N</ignore_aggregate>
-    <prefix>grp</prefix>
-    <attributes/>
-    <GUI>
-      <xloc>1616</xloc>
-      <yloc>320</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>Contar validos</name>
-    <type>GroupBy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <add_linenr>N</add_linenr>
-    <all_rows>Y</all_rows>
-    <directory>${java.io.tmpdir}</directory>
-    <fields>
-      <field>
-        <aggregate>registros_validos</aggregate>
-        <type>COUNT_ANY</type>
-      </field>
-    </fields>
-    <give_back_row>N</give_back_row>
-    <group>
-</group>
-    <ignore_aggregate>N</ignore_aggregate>
-    <prefix>grp</prefix>
-    <attributes/>
-    <GUI>
-      <xloc>1360</xloc>
-      <yloc>32</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>Convertir tipos</name>
     <type>SelectValues</type>
-    <description/>
+    <description />
     <distribute>Y</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
     <fields>
       <meta>
-        <conversion_mask>yyyy/MM/dd</conversion_mask>
-        <currency_symbol/>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <currency_symbol />
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <decimal_symbol/>
-        <encoding/>
-        <grouping_symbol/>
+        <date_format_locale />
+        <date_format_timezone />
+        <decimal_symbol />
+        <encoding />
+        <grouping_symbol />
         <length>-2</length>
         <lenient_string_to_number>N</lenient_string_to_number>
         <name>fecha_prestamo</name>
         <precision>-2</precision>
         <rename>fecha_prestamo</rename>
         <roundingType>half_even</roundingType>
-        <storage_type/>
+        <storage_type />
         <type>Date</type>
       </meta>
       <meta>
-        <conversion_mask>yyyy/MM/dd</conversion_mask>
-        <currency_symbol/>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <currency_symbol />
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <decimal_symbol/>
-        <encoding/>
-        <grouping_symbol/>
+        <date_format_locale />
+        <date_format_timezone />
+        <decimal_symbol />
+        <encoding />
+        <grouping_symbol />
         <length>-2</length>
         <lenient_string_to_number>N</lenient_string_to_number>
         <name>fecha_vencimiento</name>
         <precision>-2</precision>
         <rename>fecha_vencimiento</rename>
         <roundingType>half_even</roundingType>
-        <storage_type/>
+        <storage_type />
         <type>Date</type>
       </meta>
       <meta>
-        <conversion_mask>yyyy/MM/dd</conversion_mask>
-        <currency_symbol/>
+        <conversion_mask>yyyy-MM-dd</conversion_mask>
+        <currency_symbol />
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <decimal_symbol/>
-        <encoding/>
-        <grouping_symbol/>
+        <date_format_locale />
+        <date_format_timezone />
+        <decimal_symbol />
+        <encoding />
+        <grouping_symbol />
         <length>-2</length>
         <lenient_string_to_number>N</lenient_string_to_number>
         <name>fecha_devolucion</name>
         <precision>-2</precision>
         <rename>fecha_devolucion</rename>
         <roundingType>half_even</roundingType>
-        <storage_type/>
+        <storage_type />
         <type>Date</type>
       </meta>
       <meta>
-        <conversion_mask/>
-        <currency_symbol/>
+        <conversion_mask />
+        <currency_symbol />
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
+        <date_format_locale />
+        <date_format_timezone />
         <decimal_symbol>.</decimal_symbol>
-        <encoding/>
+        <encoding />
         <grouping_symbol>,</grouping_symbol>
         <length>-2</length>
         <lenient_string_to_number>N</lenient_string_to_number>
@@ -487,12 +405,30 @@
         <precision>-2</precision>
         <rename>multa_crc</rename>
         <roundingType>half_even</roundingType>
-        <storage_type/>
+        <storage_type />
         <type>Number</type>
+      </meta>
+      <meta>
+        <conversion_mask />
+        <currency_symbol />
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale />
+        <date_format_timezone />
+        <decimal_symbol />
+        <encoding />
+        <grouping_symbol />
+        <length>-2</length>
+        <lenient_string_to_number>N</lenient_string_to_number>
+        <name>renovaciones</name>
+        <precision>-2</precision>
+        <rename>renovaciones</rename>
+        <roundingType>half_even</roundingType>
+        <storage_type />
+        <type>Integer</type>
       </meta>
       <select_unspecified>N</select_unspecified>
     </fields>
-    <attributes/>
+    <attributes />
     <GUI>
       <xloc>1168</xloc>
       <yloc>96</yloc>
@@ -501,13 +437,13 @@
   <transform>
     <name>Homologar canal_prestamo</name>
     <type>ValueMapper</type>
-    <description/>
+    <description />
     <distribute>Y</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
     <field_to_use>canal_prestamo</field_to_use>
     <fields>
@@ -545,7 +481,7 @@
       </field>
     </fields>
     <target_type>String</target_type>
-    <attributes/>
+    <attributes />
     <GUI>
       <xloc>736</xloc>
       <yloc>208</yloc>
@@ -554,13 +490,13 @@
   <transform>
     <name>Homologar categoria</name>
     <type>ValueMapper</type>
-    <description/>
+    <description />
     <distribute>Y</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
     <field_to_use>categoria</field_to_use>
     <fields>
@@ -682,7 +618,7 @@
       </field>
     </fields>
     <target_type>String</target_type>
-    <attributes/>
+    <attributes />
     <GUI>
       <xloc>544</xloc>
       <yloc>208</yloc>
@@ -691,13 +627,13 @@
   <transform>
     <name>Homologar estado_prestamo</name>
     <type>ValueMapper</type>
-    <description/>
+    <description />
     <distribute>Y</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
     <field_to_use>estado_prestamo</field_to_use>
     <fields>
@@ -739,7 +675,7 @@
       </field>
     </fields>
     <target_type>String</target_type>
-    <attributes/>
+    <attributes />
     <GUI>
       <xloc>736</xloc>
       <yloc>96</yloc>
@@ -748,13 +684,13 @@
   <transform>
     <name>Homologar sede_biblioteca</name>
     <type>ValueMapper</type>
-    <description/>
+    <description />
     <distribute>Y</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
     <field_to_use>sede_biblioteca</field_to_use>
     <fields>
@@ -776,7 +712,7 @@
       </field>
     </fields>
     <target_type>String</target_type>
-    <attributes/>
+    <attributes />
     <GUI>
       <xloc>960</xloc>
       <yloc>208</yloc>
@@ -785,13 +721,13 @@
   <transform>
     <name>Homologar tipo_usuario</name>
     <type>ValueMapper</type>
-    <description/>
+    <description />
     <distribute>Y</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
     <field_to_use>tipo_usuario</field_to_use>
     <fields>
@@ -829,7 +765,7 @@
       </field>
     </fields>
     <target_type>String</target_type>
-    <attributes/>
+    <attributes />
     <GUI>
       <xloc>544</xloc>
       <yloc>96</yloc>
@@ -838,23 +774,23 @@
   <transform>
     <name>Limpiar textos</name>
     <type>StringOperations</type>
-    <description/>
+    <description />
     <distribute>Y</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
     <fields>
       <field>
         <in_stream_name>id_prestamo</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>none</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -862,12 +798,12 @@
       </field>
       <field>
         <in_stream_name>categoria</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>lower</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -875,12 +811,12 @@
       </field>
       <field>
         <in_stream_name>tipo_usuario</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>lower</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -888,12 +824,12 @@
       </field>
       <field>
         <in_stream_name>estado_prestamo</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>lower</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -901,12 +837,12 @@
       </field>
       <field>
         <in_stream_name>canal_prestamo</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>lower</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -914,12 +850,12 @@
       </field>
       <field>
         <in_stream_name>isbn</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>none</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -927,12 +863,12 @@
       </field>
       <field>
         <in_stream_name>autor</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>none</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -940,12 +876,12 @@
       </field>
       <field>
         <in_stream_name>sede_biblioteca</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>none</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -953,12 +889,12 @@
       </field>
       <field>
         <in_stream_name>nombre_usuario</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>none</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -966,12 +902,12 @@
       </field>
       <field>
         <in_stream_name>observaciones</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>none</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -979,12 +915,12 @@
       </field>
       <field>
         <in_stream_name>titulo_libro</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>none</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -992,12 +928,12 @@
       </field>
       <field>
         <in_stream_name>id_libro</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>none</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -1005,12 +941,12 @@
       </field>
       <field>
         <in_stream_name>id_bibliotecario</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>none</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
@@ -1018,19 +954,19 @@
       </field>
       <field>
         <in_stream_name>id_usuario</in_stream_name>
-        <out_stream_name/>
+        <out_stream_name />
         <trim_type>both</trim_type>
         <lower_upper>none</lower_upper>
         <padding_type>none</padding_type>
-        <pad_char/>
-        <pad_len/>
+        <pad_char />
+        <pad_len />
         <init_cap>no</init_cap>
         <mask_xml>none</mask_xml>
         <digits>none</digits>
         <remove_special_characters>none</remove_special_characters>
       </field>
     </fields>
-    <attributes/>
+    <attributes />
     <GUI>
       <xloc>336</xloc>
       <yloc>80</yloc>
@@ -1039,13 +975,13 @@
   <transform>
     <name>Prelimpiar valores inválidos</name>
     <type>ReplaceString</type>
-    <description/>
+    <description />
     <distribute>N</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
     <fields>
       <field>
@@ -1399,8 +1335,98 @@
         <use_regex>N</use_regex>
         <whole_word>N</whole_word>
       </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>multa_crc</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_string>^-\d+(?:\.\d+)?$</replace_string>
+        <replace_by_string>NEGATIVE_VALUE</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>renovaciones</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_string>^-\d+$</replace_string>
+        <replace_by_string>NEGATIVE_VALUE</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>Y</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>id_bibliotecario</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_by_string>BIB</replace_by_string>
+        <replace_string>BIB-</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>N</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>id_bibliotecario</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_by_string>BIB</replace_by_string>
+        <replace_string>bib-</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>N</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>id_bibliotecario</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_by_string />
+        <replace_string>??</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>N</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>id_bibliotecario</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_by_string />
+        <replace_string>NULL</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>N</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>id_bibliotecario</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_by_string />
+        <replace_string>null</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>N</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>id_bibliotecario</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_by_string />
+        <replace_string>N/A</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>N</use_regex>
+        <whole_word>N</whole_word>
+      </field>
+      <field>
+        <case_sensitive>N</case_sensitive>
+        <in_stream_name>id_bibliotecario</in_stream_name>
+        <is_unicode>N</is_unicode>
+        <replace_by_string />
+        <replace_string>n/a</replace_string>
+        <set_empty_string>N</set_empty_string>
+        <use_regex>N</use_regex>
+        <whole_word>N</whole_word>
+      </field>
     </fields>
-    <attributes/>
+    <attributes />
     <GUI>
       <xloc>960</xloc>
       <yloc>96</yloc>
@@ -1409,13 +1435,13 @@
   <transform>
     <name>Reemplazar caracteres inválidos</name>
     <type>ReplaceString</type>
-    <description/>
+    <description />
     <distribute>Y</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
     <fields>
       <field>
@@ -2379,7 +2405,7 @@
         <whole_word>N</whole_word>
       </field>
     </fields>
-    <attributes/>
+    <attributes />
     <GUI>
       <xloc>336</xloc>
       <yloc>208</yloc>
@@ -2388,13 +2414,13 @@
   <transform>
     <name>Validar registros</name>
     <type>Validator</type>
-    <description/>
+    <description />
     <distribute>N</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
     <concat_errors>Y</concat_errors>
     <concat_separator> | </concat_separator>
@@ -2409,8 +2435,8 @@
       <error_description>id_prestamo vacío</error_description>
       <grouping_symbol>,</grouping_symbol>
       <is_sourcing_values>N</is_sourcing_values>
-      <max_length/>
-      <min_length/>
+      <max_length />
+      <min_length />
       <name>id_prestamo</name>
       <null_allowed>N</null_allowed>
       <only_null_allowed>N</only_null_allowed>
@@ -2424,16 +2450,36 @@
       <data_type_verified>N</data_type_verified>
       <decimal_symbol>.</decimal_symbol>
       <error_code>ID_USUARIO</error_code>
-      <error_description>id_usuario vacío</error_description>
+      <error_description>id_usuario vacío o con formato inválido</error_description>
       <grouping_symbol>,</grouping_symbol>
       <is_sourcing_values>N</is_sourcing_values>
-      <max_length/>
-      <min_length/>
+      <max_length />
+      <min_length />
       <name>id_usuario</name>
       <null_allowed>N</null_allowed>
       <only_null_allowed>N</only_null_allowed>
       <only_numeric_allowed>N</only_numeric_allowed>
       <validation_name>id_usuario_validator</validation_name>
+      <regular_expression>^USR[0-9]+$</regular_expression>
+    </validator_field>
+    <validator_field>
+      <allowed_value>
+</allowed_value>
+      <data_type>String</data_type>
+      <data_type_verified>N</data_type_verified>
+      <decimal_symbol>.</decimal_symbol>
+      <error_code>ID_BIBLIOTECARIO</error_code>
+      <error_description>id_bibliotecario vacío o con formato inválido</error_description>
+      <grouping_symbol>,</grouping_symbol>
+      <is_sourcing_values>N</is_sourcing_values>
+      <max_length />
+      <min_length />
+      <name>id_bibliotecario</name>
+      <null_allowed>N</null_allowed>
+      <only_null_allowed>N</only_null_allowed>
+      <only_numeric_allowed>N</only_numeric_allowed>
+      <validation_name>id_bibliotecario_validator</validation_name>
+      <regular_expression>^BIB[0-9]+$</regular_expression>
     </validator_field>
     <validator_field>
       <allowed_value>
@@ -2445,8 +2491,8 @@
       <error_description>id_libro vacío</error_description>
       <grouping_symbol>,</grouping_symbol>
       <is_sourcing_values>N</is_sourcing_values>
-      <max_length/>
-      <min_length/>
+      <max_length />
+      <min_length />
       <name>id_libro</name>
       <null_allowed>N</null_allowed>
       <only_null_allowed>N</only_null_allowed>
@@ -2463,8 +2509,8 @@
       <error_description>titulo_libro vacío</error_description>
       <grouping_symbol>,</grouping_symbol>
       <is_sourcing_values>N</is_sourcing_values>
-      <max_length/>
-      <min_length/>
+      <max_length />
+      <min_length />
       <name>titulo_libro</name>
       <null_allowed>N</null_allowed>
       <only_null_allowed>N</only_null_allowed>
@@ -2481,8 +2527,8 @@
       <error_description>tipo_usuario vacío</error_description>
       <grouping_symbol>,</grouping_symbol>
       <is_sourcing_values>N</is_sourcing_values>
-      <max_length/>
-      <min_length/>
+      <max_length />
+      <min_length />
       <name>tipo_usuario</name>
       <null_allowed>N</null_allowed>
       <only_null_allowed>N</only_null_allowed>
@@ -2499,8 +2545,8 @@
       <error_description>estado_prestamo vacío</error_description>
       <grouping_symbol>,</grouping_symbol>
       <is_sourcing_values>N</is_sourcing_values>
-      <max_length/>
-      <min_length/>
+      <max_length />
+      <min_length />
       <name>estado_prestamo</name>
       <null_allowed>N</null_allowed>
       <only_null_allowed>N</only_null_allowed>
@@ -2517,8 +2563,8 @@
       <error_description>canal_prestamo vacío</error_description>
       <grouping_symbol>,</grouping_symbol>
       <is_sourcing_values>N</is_sourcing_values>
-      <max_length/>
-      <min_length/>
+      <max_length />
+      <min_length />
       <name>canal_prestamo</name>
       <null_allowed>N</null_allowed>
       <only_null_allowed>N</only_null_allowed>
@@ -2536,8 +2582,8 @@
       <error_description>fecha_prestamo inválida</error_description>
       <grouping_symbol>,</grouping_symbol>
       <is_sourcing_values>N</is_sourcing_values>
-      <max_length/>
-      <min_length/>
+      <max_length />
+      <min_length />
       <name>fecha_prestamo</name>
       <null_allowed>N</null_allowed>
       <only_null_allowed>N</only_null_allowed>
@@ -2555,8 +2601,8 @@
       <error_description>fecha_vencimiento inválida</error_description>
       <grouping_symbol>,</grouping_symbol>
       <is_sourcing_values>N</is_sourcing_values>
-      <max_length/>
-      <min_length/>
+      <max_length />
+      <min_length />
       <name>fecha_vencimiento</name>
       <null_allowed>N</null_allowed>
       <only_null_allowed>N</only_null_allowed>
@@ -2574,8 +2620,8 @@
       <error_description>fecha_devolucion inválida</error_description>
       <grouping_symbol>,</grouping_symbol>
       <is_sourcing_values>N</is_sourcing_values>
-      <max_length/>
-      <min_length/>
+      <max_length />
+      <min_length />
       <name>fecha_devolucion</name>
       <null_allowed>Y</null_allowed>
       <only_null_allowed>N</only_null_allowed>
@@ -2589,16 +2635,17 @@
       <data_type_verified>Y</data_type_verified>
       <decimal_symbol>.</decimal_symbol>
       <error_code>MULTA</error_code>
-      <error_description>multa_crc inválida</error_description>
+      <error_description>multa_crc inválida o negativa</error_description>
       <grouping_symbol>,</grouping_symbol>
       <is_sourcing_values>N</is_sourcing_values>
-      <max_length/>
-      <min_length/>
+      <max_length />
+      <min_length />
       <name>multa_crc</name>
       <null_allowed>Y</null_allowed>
       <only_null_allowed>N</only_null_allowed>
       <only_numeric_allowed>N</only_numeric_allowed>
       <validation_name>multa_crc_validator</validation_name>
+      <minimum_value>0</minimum_value>
     </validator_field>
     <validator_field>
       <allowed_value>
@@ -2607,16 +2654,17 @@
       <data_type_verified>Y</data_type_verified>
       <decimal_symbol>.</decimal_symbol>
       <error_code>RENOVACIONES</error_code>
-      <error_description>renovaciones inválida</error_description>
+      <error_description>renovaciones inválida o negativa</error_description>
       <grouping_symbol>,</grouping_symbol>
       <is_sourcing_values>N</is_sourcing_values>
-      <max_length/>
-      <min_length/>
+      <max_length />
+      <min_length />
       <name>renovaciones</name>
       <null_allowed>N</null_allowed>
       <only_null_allowed>N</only_null_allowed>
       <only_numeric_allowed>N</only_numeric_allowed>
       <validation_name>renovaciones_validator</validation_name>
+      <minimum_value>0</minimum_value>
     </validator_field>
     <validator_field>
       <allowed_value>
@@ -2637,7 +2685,43 @@
       <regular_expression>^(?:\d{13}|\d{9}[\dX])$</regular_expression>
       <validation_name>isbn_validator</validation_name>
     </validator_field>
-    <attributes/>
+    <validator_field>
+      <allowed_value>
+</allowed_value>
+      <data_type>String</data_type>
+      <data_type_verified>N</data_type_verified>
+      <decimal_symbol>.</decimal_symbol>
+      <error_code>NOMBRE_USUARIO</error_code>
+      <error_description>nombre_usuario vacío</error_description>
+      <grouping_symbol>,</grouping_symbol>
+      <is_sourcing_values>N</is_sourcing_values>
+      <max_length />
+      <min_length />
+      <name>nombre_usuario</name>
+      <null_allowed>N</null_allowed>
+      <only_null_allowed>N</only_null_allowed>
+      <only_numeric_allowed>N</only_numeric_allowed>
+      <validation_name>nombre_usuario_validator_extra</validation_name>
+    </validator_field>
+    <validator_field>
+      <allowed_value>
+</allowed_value>
+      <data_type>String</data_type>
+      <data_type_verified>N</data_type_verified>
+      <decimal_symbol>.</decimal_symbol>
+      <error_code>AUTOR</error_code>
+      <error_description>autor vacío</error_description>
+      <grouping_symbol>,</grouping_symbol>
+      <is_sourcing_values>N</is_sourcing_values>
+      <max_length />
+      <min_length />
+      <name>autor</name>
+      <null_allowed>N</null_allowed>
+      <only_null_allowed>N</only_null_allowed>
+      <only_numeric_allowed>N</only_numeric_allowed>
+      <validation_name>autor_validator_extra</validation_name>
+    </validator_field>
+    <attributes />
     <GUI>
       <xloc>1168</xloc>
       <yloc>240</yloc>
@@ -2646,15 +2730,15 @@
   <transform>
     <name>errores_etl</name>
     <type>TextFileOutput</type>
-    <description/>
+    <description />
     <distribute>Y</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
-    <schema_definition/>
+    <schema_definition />
     <ignore_fields>N</ignore_fields>
     <separator>;</separator>
     <enclosure>"</enclosure>
@@ -2665,296 +2749,296 @@
     <format>DOS</format>
     <compression>None</compression>
     <encoding>UTF-8</encoding>
-    <endedLine/>
+    <endedLine />
     <fileNameInField>N</fileNameInField>
-    <fileNameField/>
+    <fileNameField />
     <create_parent_folder>N</create_parent_folder>
     <file>
       <name>C:\Users\Usuario I 2026\Downloads\Expo Grupal 1\errores\errores_etl.csv</name>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention/>
+      <extention />
       <append>N</append>
       <split>N</split>
       <haspartno>N</haspartno>
       <add_date>N</add_date>
       <add_time>N</add_time>
       <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
+      <date_time_format />
       <add_to_result_filenames>Y</add_to_result_filenames>
       <pad>N</pad>
       <fast_dump>N</fast_dump>
-      <splitevery/>
+      <splitevery />
     </file>
     <fields>
       <field>
         <name>id_prestamo</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>13</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>fecha_prestamo</name>
-        <type>Date</type>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>10</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>fecha_vencimiento</name>
-        <type>Date</type>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>10</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>fecha_devolucion</name>
-        <type>Date</type>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>10</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>categoria</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>12</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>tipo_usuario</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>12</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>estado_prestamo</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>12</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>canal_prestamo</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>12</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>isbn</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>13</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>renovaciones</name>
-        <type>Integer</type>
-        <format/>
-        <currency>₡</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <nullif/>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>3</length>
-        <precision>0</precision>
+        <length>-1</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>autor</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>17</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>sede_biblioteca</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>17</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>nombre_usuario</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>34</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>observaciones</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>31</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>titulo_libro</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>45</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>id_libro</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>7</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>id_bibliotecario</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>7</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>multa_crc</name>
-        <type>Number</type>
-        <format>00000000</format>
-        <currency>₡</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>8</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>id_usuario</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>9</length>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>nr_errores</name>
-        <type>Integer</type>
-        <format>####0;-####0</format>
-        <currency>₡</currency>
-        <decimal>,</decimal>
-        <group> </group>
-        <nullif/>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
-        <length>3</length>
-        <precision>0</precision>
+        <length>-1</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>descripcion_error</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -2963,11 +3047,11 @@
       <field>
         <name>campos_error</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -2976,163 +3060,35 @@
       <field>
         <name>codigos_error</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
         <precision>-1</precision>
       </field>
     </fields>
-    <attributes/>
+    <attributes />
     <GUI>
       <xloc>1616</xloc>
       <yloc>240</yloc>
     </GUI>
   </transform>
   <transform>
-    <name>metricas_errores</name>
-    <type>TextFileOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <schema_definition/>
-    <ignore_fields>N</ignore_fields>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding>UTF-8</encoding>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>N</create_parent_folder>
-    <file>
-      <name>C:\Users\Usuario I 2026\Downloads\Expo Grupal 1\errores\metricas_errores.csv</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention/>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery/>
-    </file>
-    <fields>
-      <field>
-        <name>registros_error</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <roundingType>half_even</roundingType>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>1840</xloc>
-      <yloc>320</yloc>
-    </GUI>
-  </transform>
-  <transform>
-    <name>metricas_validos</name>
-    <type>TextFileOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <schema_definition/>
-    <ignore_fields>N</ignore_fields>
-    <separator>;</separator>
-    <enclosure>"</enclosure>
-    <enclosure_forced>N</enclosure_forced>
-    <enclosure_fix_disabled>N</enclosure_fix_disabled>
-    <header>Y</header>
-    <footer>N</footer>
-    <format>DOS</format>
-    <compression>None</compression>
-    <encoding>UTF-8</encoding>
-    <endedLine/>
-    <fileNameInField>N</fileNameInField>
-    <fileNameField/>
-    <create_parent_folder>N</create_parent_folder>
-    <file>
-      <name>C:\Users\Usuario I 2026\Downloads\Expo Grupal 1\output\metricas_validos.csv</name>
-      <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention/>
-      <append>N</append>
-      <split>N</split>
-      <haspartno>N</haspartno>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
-      <add_to_result_filenames>Y</add_to_result_filenames>
-      <pad>N</pad>
-      <fast_dump>N</fast_dump>
-      <splitevery/>
-    </file>
-    <fields>
-      <field>
-        <name>registros_validos</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
-        <trim_type>none</trim_type>
-        <roundingType>half_even</roundingType>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <attributes/>
-    <GUI>
-      <xloc>1840</xloc>
-      <yloc>32</yloc>
-    </GUI>
-  </transform>
-  <transform>
     <name>prestamos_limpios</name>
     <type>TextFileOutput</type>
-    <description/>
+    <description />
     <distribute>Y</distribute>
-    <custom_distribution/>
+    <custom_distribution />
     <copies>1</copies>
     <partitioning>
       <method>none</method>
-      <schema_name/>
+      <schema_name />
     </partitioning>
-    <schema_definition/>
+    <schema_definition />
     <ignore_fields>N</ignore_fields>
     <separator>;</separator>
     <enclosure>"</enclosure>
@@ -3143,36 +3099,36 @@
     <format>DOS</format>
     <compression>None</compression>
     <encoding>UTF-8</encoding>
-    <endedLine/>
+    <endedLine />
     <fileNameInField>N</fileNameInField>
-    <fileNameField/>
+    <fileNameField />
     <create_parent_folder>N</create_parent_folder>
     <file>
       <name>C:\Users\Usuario I 2026\Downloads\Expo Grupal 1\output\prestamos_limpios.csv</name>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention/>
+      <extention />
       <append>N</append>
       <split>N</split>
       <haspartno>N</haspartno>
       <add_date>N</add_date>
       <add_time>N</add_time>
       <SpecifyFormat>N</SpecifyFormat>
-      <date_time_format/>
+      <date_time_format />
       <add_to_result_filenames>Y</add_to_result_filenames>
       <pad>N</pad>
       <fast_dump>N</fast_dump>
-      <splitevery/>
+      <splitevery />
     </file>
     <fields>
       <field>
         <name>id_prestamo</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3181,11 +3137,11 @@
       <field>
         <name>fecha_prestamo</name>
         <type>Date</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format>yyyy-MM-dd</format>
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3194,11 +3150,11 @@
       <field>
         <name>fecha_vencimiento</name>
         <type>Date</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format>yyyy-MM-dd</format>
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3207,11 +3163,11 @@
       <field>
         <name>fecha_devolucion</name>
         <type>Date</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format>yyyy-MM-dd</format>
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3220,11 +3176,11 @@
       <field>
         <name>categoria</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3233,11 +3189,11 @@
       <field>
         <name>tipo_usuario</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3246,11 +3202,11 @@
       <field>
         <name>estado_prestamo</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3259,11 +3215,11 @@
       <field>
         <name>canal_prestamo</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3272,11 +3228,11 @@
       <field>
         <name>isbn</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3285,11 +3241,11 @@
       <field>
         <name>renovaciones</name>
         <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3298,11 +3254,11 @@
       <field>
         <name>autor</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3311,11 +3267,11 @@
       <field>
         <name>sede_biblioteca</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3324,11 +3280,11 @@
       <field>
         <name>nombre_usuario</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3337,11 +3293,11 @@
       <field>
         <name>observaciones</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3350,11 +3306,11 @@
       <field>
         <name>titulo_libro</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3363,11 +3319,11 @@
       <field>
         <name>id_libro</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3376,11 +3332,11 @@
       <field>
         <name>id_bibliotecario</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3389,11 +3345,11 @@
       <field>
         <name>multa_crc</name>
         <type>Number</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
@@ -3402,18 +3358,18 @@
       <field>
         <name>id_usuario</name>
         <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif/>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
         <trim_type>none</trim_type>
         <roundingType>half_even</roundingType>
         <length>-1</length>
         <precision>-1</precision>
       </field>
     </fields>
-    <attributes/>
+    <attributes />
     <GUI>
       <xloc>1600</xloc>
       <yloc>96</yloc>
@@ -3428,10 +3384,22 @@
       <descriptions_valuename>descripcion_error</descriptions_valuename>
       <fields_valuename>campos_error</fields_valuename>
       <codes_valuename>codigos_error</codes_valuename>
-      <max_errors/>
-      <max_pct_errors/>
-      <min_pct_rows/>
+      <max_errors />
+      <max_pct_errors />
+      <min_pct_rows />
+    </error>
+    <error>
+      <source_transform>Convertir tipos</source_transform>
+      <target_transform>errores_etl</target_transform>
+      <is_enabled>Y</is_enabled>
+      <nr_valuename>nr_errores</nr_valuename>
+      <descriptions_valuename>descripcion_error</descriptions_valuename>
+      <fields_valuename>campos_error</fields_valuename>
+      <codes_valuename>codigos_error</codes_valuename>
+      <max_errors />
+      <max_pct_errors />
+      <min_pct_rows />
     </error>
   </transform_error_handling>
-  <attributes/>
+  <attributes />
 </pipeline>
